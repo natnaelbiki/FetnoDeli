@@ -1,0 +1,11 @@
+<!-- templates/update.html-->
+{% extends 'base.html' %}
+
+{% block title %}Update Shop{% endblock %}
+{% block content %}
+{% if user.is_authenticated %}
+  Hi {{ user.username }} update!
+{% else %}
+  <p>You are not logged in</p>
+{% endif %}
+{% endblock %}

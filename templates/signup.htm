@@ -1,0 +1,65 @@
+{% extends "index.htm" %} 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}Registration{% endblock %}</title>
+</head>
+<body>
+{% block content %}
+<div class="row">
+	<div class="col">
+	</div>
+	<div class="col">
+		<br>
+		<h4><center>Signup Form</center></h4>
+		<form method="post">
+  <!-- Email input -->
+  <div class="form-outline mb-4">
+  	<label class="form-label" for="email">Email address</label>
+    <input type="email" name='email' class="form-control" />
+  </div>
+
+   <!-- First Name -->
+  <div class="form-outline mb-4">
+    <label class="form-label" for="First Name">First Name</label>
+    <input type="First Name" name='First Name' class="form-control" />
+  </div>
+
+   <!-- Last Name -->
+  <div class="form-outline mb-4">
+    <label class="form-label" for="Last Name">Last Name</label>
+    <input type="Last Name" name='Last Name' class="form-control" />
+  </div>
+
+
+  <!-- Password input -->
+  <div class="form-outline mb-4">
+  	<label class="form-label" for="form2Example2">Password</label>
+    <input type="password" id="form2Example2" class="form-control" />
+  </div>
+
+  <!-- Confirm Password -->
+  <div class="form-outline mb-4">
+    <label class="form-label" for="form2Example2">Confirm Password</label>
+    <input type="password" id="form2Example2" class="form-control" />
+  </div>
+
+
+  <!-- Submit button -->
+  <center><button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+</center>
+  <!-- Register buttons -->
+  <div class="text-center">
+    <p>Not a member? <a href="{% url 'signup' %}">Register</a></p>
+   
+  </div>
+</form>
+	</div>
+	<div class="col">
+		
+	</div>
+</div>
+
+{% endblock %}
+</body>
+</html>

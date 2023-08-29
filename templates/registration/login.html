@@ -1,0 +1,20 @@
+<!-- templates/registration/login.html -->
+{% extends 'home.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="col"></div>
+  <div class="col">
+    <h2>Log In</h2>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Log In</button>
+    </form>
+    <a class="nav-link" href="{% url 'password_reset'%}">Forget Password</button>
+  </div>
+  <div class="col"></div>
+</div>
+{% endblock %}
